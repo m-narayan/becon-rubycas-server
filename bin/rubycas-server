@@ -27,4 +27,5 @@ end
 
 require 'casserver'
 
-CASServer::Server.run!
+#CASServer::Server.run!
+CASServer::APIServer.run!

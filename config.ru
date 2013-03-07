@@ -8,4 +8,4 @@ use Rack::ShowExceptions
 use Rack::Runtime
 use Rack::CommonLogger
 
-run CASServer::Server.new
+run CASServer::APIServer.new
