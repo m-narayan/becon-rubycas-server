@@ -67,7 +67,7 @@ module CASServer
         CASServer::Model::TicketGrantingTicket.transaction do
           $LOG.debug("Deleting Service/Proxy Tickets for '#{tgt}' for user '#{tgt.username}'")
           tgt.granted_service_tickets.each do |st|
-            send_logout_notification_for_service_ticket(st) if setting.config[:enable_single_sign_out]
+            send_logout_notification_for_service_ticket(st) if settings.config[:enable_single_sign_out]
             # TODO: Maybe we should do some special handling if send_logout_notification_for_service_ticket fails?
             #       (the above method returns false if the POST results in a non-200 HTTP response).
             $LOG.debug "Deleting #{st.class.name.demodulize} #{st.ticket.inspect} for service #{st.service}."
