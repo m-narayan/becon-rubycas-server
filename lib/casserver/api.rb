@@ -19,7 +19,7 @@ module CASServer
     # :category: API
     #
     # return:: Status code: 204
-    get '#{uri_path}/isalive', :provides => [:json, :xml] do
+    get '#{uri_path}/api-isalive', :provides => [:json, :xml] do
       status 204
     end
 
