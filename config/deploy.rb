@@ -2,12 +2,9 @@ require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
 
 set :application, "rubycas-server"
-
 set :scm, :git
 set :repository, "git@github.com:m-narayan/rubycas-server.git"
-set :branch, "capistrano"
 set :deploy_via, :remote_cache
-set :scm_passphrase, "deployadmin123$"
 
 set :user, "sysadmin"
 set :use_sudo, false
