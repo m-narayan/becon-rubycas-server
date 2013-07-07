@@ -12,7 +12,7 @@ group :active_resource do
 end
 
 group :postgres do
-  gem 'pg',           '0.11'
+  gem 'pg',           '0.15.1'
 end
 
 group :sqlite do
